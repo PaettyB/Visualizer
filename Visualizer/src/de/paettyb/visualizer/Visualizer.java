@@ -1,10 +1,15 @@
 package de.paettyb.visualizer;
 
-public class Visualizer {
+public class Visualizer{
+	
+	private Display display;
+
+	public Visualizer() {
+		display = new Display();
+	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		new Visualizer();
 	}
 
 }
