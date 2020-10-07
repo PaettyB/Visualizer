@@ -4,17 +4,15 @@ import javax.swing.JFrame;
 
 public class Display extends JFrame {
 
-	private static final long serialVersionUID = 1L;
-
-	public static int WIDTH = 1280, HEIGHT = 720;
-	public static String TITLE = "Visualizer";
+	private static final long serialVersionUID = 1L;	
 	
-	public Display() {
-		super(TITLE);
-		setSize(WIDTH,HEIGHT);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setVisible(true);
+	public Display(String title, int width, int height) {
+		super(title);
+		setSize(width, height);
 		setResizable(false);
+		setLocationRelativeTo(null);
+		
+		setVisible(true);
 	}
 
 }
