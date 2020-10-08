@@ -1,4 +1,4 @@
-package de.paettyb.visualizer;
+package de.paettyb.visualizer.display;
 
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
@@ -9,16 +9,18 @@ import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JPanel;
 
+import de.paettyb.visualizer.Main;
+
 public class SelectorPane extends JPanel implements ActionListener {
 
-	private Visualizer v;
+	private Main v;
 	private JFileChooser fc;
 
 	private static final long serialVersionUID = 1450035610820399971L;
 
 	private JButton button;
 
-	public SelectorPane(Visualizer v) {
+	public SelectorPane(Main v) {
 		this.v = v;
 		button = new JButton("Select File");
 		button.addActionListener(this);

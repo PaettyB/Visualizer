@@ -1,4 +1,4 @@
-package de.paettyb.visualizer;
+package de.paettyb.visualizer.display;
 
 import java.awt.Graphics;
 
