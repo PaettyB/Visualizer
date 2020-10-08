@@ -28,7 +28,7 @@ public class SelectorPane extends JPanel implements ActionListener {
 	}
 
 	public void paintComponent(Graphics g) {
-		g.fillRect(20, 20, 10, 20);
+		
 	}
 
 	@Override

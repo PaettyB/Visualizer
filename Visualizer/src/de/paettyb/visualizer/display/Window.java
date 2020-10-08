@@ -12,23 +12,28 @@ import javax.sound.sampled.FloatControl;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.SourceDataLine;
 
-import de.paettyb.visualizer.Display;
 import de.paettyb.visualizer.Main;
+import de.paettyb.visualizer.Visualizer;
 
 public class Window extends Display {
 
 	private static final long serialVersionUID = -3963991986921068781L;
 
-	private Main v;
+	private Main main;
 	private String path;
+	
+	private Visualizer v;
 
-	public Window(Main v, String path) {
+	public Window(Main main, String path) {
 		super(Main.TITLE, Main.WIDTH, Main.HEIGHT);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setContentPane(new DrawPane());
 
-		this.v = v;
+		
+		this.main = main;
 		this.path = path;
+		
+		v = new Visualizer(main);
 	}
 
 	public void openAudio() {
@@ -65,8 +70,10 @@ public class Window extends Display {
 			int nBytesRead = 0, nBytesWritten = 0;
 			while (nBytesRead != -1) {
 				nBytesRead = din.read(data, 0, data.length);
-				
 				if (nBytesRead != -1)
+					
+					
+					
 					nBytesWritten = line.write(data, 0, nBytesRead);
 			}
 			// Stop

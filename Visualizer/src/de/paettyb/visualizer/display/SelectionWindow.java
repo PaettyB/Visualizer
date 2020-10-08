@@ -1,6 +1,5 @@
 package de.paettyb.visualizer.display;
 
-import de.paettyb.visualizer.Display;
 import de.paettyb.visualizer.Main;
 
 public class SelectionWindow extends Display {

@@ -8,7 +8,7 @@ public class Main {
 	private SelectionWindow selector;
 	private Window window;
 
-	public static int WIDTH = 1280, HEIGHT = 720;
+	public static int WIDTH = 400, HEIGHT = 250;
 	public static String TITLE = "Audio Visualizer";
 	
 	private Thread thread;
